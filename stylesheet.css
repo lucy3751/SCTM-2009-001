@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+
+:root{
+    --blue:  rgb(16, 91, 149);
+    --lightBlue: #28b7e7;
+    --darkBlue:#1d89ad;
+
+    --red:  rgb(192, 6, 6);
+    --darkRed:#ca411e;
+    --lightRed: #e75e28;
+}
+
+
+
+
+/* browswer reset */
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+
+}
+
+a{
+    text-decoration: none;
+    cursor:default;
+}
+
+body{
+
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+
+}
+
+
+h1{
+
+    font-size: 30px;  
+    color: white; 
+
+}
+
+
+
+/* BIG FLEX BOX */
+#bigContainer{
+
+    display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    /* margin: 5% 15%; */
+
+    width: 100vw;
+    height: 100vh;
+    
+    overflow: hidden;
+
+
+}
+
+#bigSpacer{
+
+    background-color: green;
+    flex: 0.2;
+}
+
+#brocaContainer{
+
+    /* background-color: grey; */
+    background-color: var(--red);
+    flex: 2;
+    position: relative;
+    /* height: 100%; */
+    padding-top: 7%;
+
+}
+
+#wernickeContainer{
+
+    /* background-color: purple; */
+    background-color: var(--blue);
+    flex: 2;
+    position: relative;
+    /* height: 100%; */
+    padding-top: 7%;
+
+}
+
+
+
+
+
+/* CONTENT INSIDE THE FLEX BOXES */
+.title{
+
+    /* background-color: red; */
+    text-align: center;
+
+}
+
+.buttonWrapper{
+
+    margin: 3% 0;
+   
+    width: 30%;
+    position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+ 
+
+    /* background-color: violet; */
+
+}
+
+
+.animation{
+
+    /* background-color: darkcyan; */
+    height: 650px;
+    width: 650px;
+    position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+}
+
+
+/* BUTTON */
+button{
+
+    position:relative;
+        left:50%;
+        transform: translateX(-50%);
+
+    text-align: center;
+    width: 50%;
+    height: 20%;
+    border:none;
+    outline: none;
+    border-radius: 2vw;
+
+    padding: 3%;
+
+    color: white;
+        font-size: 15px;
+
+    cursor:pointer;
+
+    transition: 0.4s ease-out;
+
+}
+
+#brocaButton{
+
+    background-color: var(--lightRed);    
+
+}
+
+#brocaButton:hover{
+
+    background-color: var(--darkRed);
+
+}
+
+#wernickeButton{
+
+    background-color: var(--lightBlue);
+
+}
+
+#wernickeButton:hover{
+
+    background-color: var(--darkBlue);
+}
+
+
+/* JQUERY EVENTS */
+.animation{
+    transition: 0.4s ease-in-out;
+}
+
+#brocaAnimation.hidden{
+    /* visibility:hidden; */
+
+    /* use opacity for animation */
+    opacity: 0;
+
+}
+
+#wernickeAnimation.hidden{
+    /* visibility:hidden; */
+    opacity: 0;
+
+}
+
+
+
+/* LOTTIE PLAYER CSS - https://lottiefiles.com/blog/working-with-lottie/how-to-add-lottie-animation-in-web-page */
+lottie-player {
+	--lottie-player-seeker-track-color: #ec8c0f;
+	--lottie-player-seeker-thumb-color: #fcbf49;
+    --lottie-player-toolbar-height: 0px;
+    --lottie-player-toolbar-icon-active-color: white;
+    --lottie-player-toolbar-icon-color: white;
+    /* --lottie-player-toolbar-icon-hover-color: red; */
+  }
+
+
+
